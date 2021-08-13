@@ -10,12 +10,12 @@ loc = 0
 state = False
 
 while start <= end:
-    mid = (start + end) // 2
+    mid = (start + end) // 2 #중앙값 인덱스 번호 구하는 것
 
     if dataset[mid] > value:
-        end = mid
+        start = mid + 1  #스타트값을 중앙에서 오른쪽으로 갈것
     elif dataset[mid] < value:
-        start = mid
+        end = mid - 1
     else:
         loc = mid
         state = True
